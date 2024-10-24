@@ -17,8 +17,8 @@ export const Navbar = async () => {
 
     return (
         <>
-            <div className="bg-background border-b fixed top-0 left-0 w-full py-2 px-3 flex flex-row items-center justify-between z-30">
-                <div className="flex flex-row items-center">
+            <div className="bg-background border-b fixed top-0 left-0 w-full py-2 px-3 flex flex-row items-center  z-30">
+                <div className="flex flex-row items-center flex-1">
                     <Logo />
                 </div>
 
@@ -27,7 +27,7 @@ export const Navbar = async () => {
                         <Link href="/search">
                             <IconSearch />{" "}
                             <span className="text-muted-foreground">
-                                find anime...
+                                Search for an anime title...
                             </span>
                         </Link>
                     </Button>
@@ -74,6 +74,8 @@ export const Navbar = async () => {
                             <Link href="/login">Login</Link>
                         </Button>
                     )}
+                </div>
+                <div className="ml-2">
                     <ThemeToggle />
                 </div>
 
@@ -97,7 +99,7 @@ export const Navbar = async () => {
                                 <Link href="/search">
                                     <IconSearch />{" "}
                                     <span className="text-muted-foreground">
-                                        find anime...
+                                        Search for an anime title...
                                     </span>
                                 </Link>
                             </Button>
@@ -135,7 +137,6 @@ export const Navbar = async () => {
                                     <Link href="/login">Login</Link>
                                 </Button>
                             )}
-                            <ThemeToggle />
                         </div>
                     </DrawerContent>
                 </Drawer>

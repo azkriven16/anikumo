@@ -34,11 +34,14 @@ export const AnimeCard: React.FC<AnimeCardProps> = ({
                 />
                 <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-opacity duration-300" />
                 <div className="absolute bottom-0 left-0 right-0 p-2 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <h3 className="text-sm font-semibold truncate">
+                    <h3 className="hidden md:block text-sm font-semibold truncate">
                         {getAnimeTitle(title)}
                     </h3>
                 </div>
             </div>
+            <h3 className="block md:hidden text-sm font-semibold mt-1 truncate">
+                {getAnimeTitle(title)}
+            </h3>
         </Link>
     );
 };

@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import { ThemeToggle } from "./theme-toggle";
 
 export const Footer: React.FC = () => {
     return (
@@ -7,25 +8,7 @@ export const Footer: React.FC = () => {
             <p className="text-sm ">
                 © {new Date().getFullYear()} Anime App. All rights reserved.
             </p>
-            <nav>
-                <ul className="flex space-x-4">
-                    <li>
-                        <Link href="/about" className="text-sm">
-                            About
-                        </Link>
-                    </li>
-                    <li>
-                        <Link href="/privacy" className="text-sm">
-                            Privacy Policy
-                        </Link>
-                    </li>
-                    <li>
-                        <Link href="/terms" className="text-sm">
-                            Terms of Service
-                        </Link>
-                    </li>
-                </ul>
-            </nav>
+            <ThemeToggle />
         </footer>
     );
 };

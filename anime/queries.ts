@@ -76,6 +76,15 @@ export const getAnimeEpisodeStreaming = async (
     return response?.data;
 };
 
+export const getSearchAnime = async (id: string) => {
+    const response = await client.get<AnimeResponse<Anime>>(`/${id}`, {
+        params: {
+            provider: default_provider,
+        },
+    });
+    return response.data.results;
+};
+
 export const getAllAnime = async () => {
     const data = await Promise.all([
         getTrendingAnime(),

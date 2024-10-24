@@ -4,7 +4,6 @@ import { getAllAnime } from "@/anime/queries";
 import { AnimeGrid } from "@/components/sections/anime-grid";
 import { LoadingSpinner } from "@/components/shared/loading-spinner";
 import NotFound from "@/components/shared/not-found";
-import { IconBrandGithub } from "@tabler/icons-react";
 import { useQuery } from "react-query";
 
 export default function Home() {
@@ -25,7 +24,6 @@ export default function Home() {
                 <span className="text-muted-foreground text-sm">
                     Discover and stream anime for free on Anikumo.
                 </span>
-                <IconBrandGithub size={24} />
             </div>
             <AnimeGrid data={[...trendingAnime, ...mostPopularAnime]} />
         </main>
